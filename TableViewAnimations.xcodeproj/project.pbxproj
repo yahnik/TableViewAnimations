@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378453141DF7C9EB00FADCEE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 378453131DF7C9EB00FADCEE /* TableViewCell.m */; };
 		605F08C11DF66C3A00C21EDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08C01DF66C3A00C21EDF /* main.m */; };
 		605F08C41DF66C3A00C21EDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08C31DF66C3A00C21EDF /* AppDelegate.m */; };
 		605F08C71DF66C3A00C21EDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08C61DF66C3A00C21EDF /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		378453121DF7C9EB00FADCEE /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		378453131DF7C9EB00FADCEE /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		605F08BC1DF66C3A00C21EDF /* TableViewAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		605F08C01DF66C3A00C21EDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		605F08C21DF66C3A00C21EDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				605F08D91DF66F7D00C21EDF /* DetailViewController.m */,
 				605F08DB1DF67BB000C21EDF /* TransitioningAnimator.h */,
 				605F08DC1DF67BB000C21EDF /* TransitioningAnimator.m */,
+				378453121DF7C9EB00FADCEE /* TableViewCell.h */,
+				378453131DF7C9EB00FADCEE /* TableViewCell.m */,
 			);
 			path = TableViewAnimations;
 			sourceTree = "<group>";
@@ -117,7 +122,7 @@
 				TargetAttributes = {
 					605F08BB1DF66C3A00C21EDF = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = R5JT688P54;
+						DevelopmentTeam = QATBQ3465C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				605F08DD1DF67BB000C21EDF /* TransitioningAnimator.m in Sources */,
+				378453141DF7C9EB00FADCEE /* TableViewCell.m in Sources */,
 				605F08C71DF66C3A00C21EDF /* ViewController.m in Sources */,
 				605F08C41DF66C3A00C21EDF /* AppDelegate.m in Sources */,
 				605F08C11DF66C3A00C21EDF /* main.m in Sources */,
@@ -260,10 +266,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R5JT688P54;
+				DEVELOPMENT_TEAM = QATBQ3465C;
 				INFOPLIST_FILE = TableViewAnimations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sketchead.TableViewAnimations;
+				PRODUCT_BUNDLE_IDENTIFIER = com.djonik.TableViewAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -272,10 +278,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R5JT688P54;
+				DEVELOPMENT_TEAM = QATBQ3465C;
 				INFOPLIST_FILE = TableViewAnimations/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sketchead.TableViewAnimations;
+				PRODUCT_BUNDLE_IDENTIFIER = com.djonik.TableViewAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -299,6 +305,7 @@
 				605F08D51DF66C3A00C21EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "DetailViewController.h"
+#import "TableViewCell.h"
 #import "TransitioningAnimator.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
@@ -52,8 +53,8 @@
     
     // Hold on to the selected cell since we'll need to use its image view as a starting point
     // for the presentation.
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    self.animationBeginRect = [cell convertRect:cell.imageView.frame toView:nil];
+    TableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    self.animationBeginRect = [cell convertRect:cell.thumbnailView.frame toView:nil];
     
     DetailViewController *detailPage = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:detailPage animated:YES];
@@ -66,17 +67,22 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kTableViewCellId];
         cell.imageView.contentMode = UIViewContentModeTopLeft;
         cell.imageView.clipsToBounds = YES;
     }
     
-    cell.textLabel.text = self.data[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"cat"];
+    cell.label.text = self.data[indexPath.row];
+    cell.thumbnailView.image = [UIImage imageNamed:@"cat"];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 150.0f;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
@@ -88,7 +94,7 @@
         return [[TransitioningAnimator alloc] initWithInitialFrame:self.animationBeginRect];
     }
     
-    // Don't worry about pop operations
+    // Ignore non-pop operations for now
     return nil;
 }
 
