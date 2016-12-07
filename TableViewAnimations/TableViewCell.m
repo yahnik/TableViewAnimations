@@ -48,7 +48,7 @@
     if (!_thumbnailView) {
         // Frame will be set in layoutSubviews
         _thumbnailView = [[UIImageView alloc] init];
-        _thumbnailView.contentMode = UIViewContentModeBottom;
+        _thumbnailView.contentMode = UIViewContentModeTopLeft;
         _thumbnailView.clipsToBounds = YES;
     }
     
