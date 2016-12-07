@@ -72,6 +72,8 @@
             frame.origin.y = CGRectGetHeight(frame);
             frame;
         });
+        
+        _textView.backgroundColor = [UIColor lightGrayColor];
     }
     
     return _textView;

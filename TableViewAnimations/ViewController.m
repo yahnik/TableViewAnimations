@@ -94,7 +94,7 @@
         return [[TransitioningAnimator alloc] initWithInitialFrame:self.animationBeginRect];
     }
     
-    // Ignore non-pop operations for now
+    // Ignore non-push operations for now
     return nil;
 }
 
