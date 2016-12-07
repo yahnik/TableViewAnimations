@@ -32,10 +32,14 @@
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIView *containerView = [transitionContext containerView];
 
+    // toView's frame is currently its default frame - full screen. Hold on to this
+    // as it will be our target frame for the animation.
     CGRect originalFrame = toView.frame;
     
     // The toView will start 'on top of' the table view cell's image view
     toView.frame = self.initialFrame;
+
+    // Clip the detail page's subviews as the frame expands.
     toView.clipsToBounds = YES;
     
     [containerView addSubview:toView];

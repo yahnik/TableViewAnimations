@@ -50,7 +50,7 @@
 {
     if (!_imageView) {
         _imageView = [[UIImageView alloc] init];
-        _imageView.contentMode = UIViewContentModeCenter;
+        _imageView.contentMode = UIViewContentModeScaleAspectFill;
         
         _imageView.frame = ({
             CGRect frame = self.view.bounds;
